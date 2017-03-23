@@ -1,7 +1,29 @@
 <html>
 <head>
     <script type="text/javascript">
+        function moveover() {
+            document.getElementById('image').width = 200;
+            document.getElementById('image').height = 360;
+
+            document.getElementById('text1').innerHTML = 'Enlarge image!';
+        }
+
+        function moveback() {
+            document.getElementById('image').width = 100;
+            document.getElementById('image').height = 180;
+
+            document.getElementById('text1').innerHTML = 'Original size';
+        }
     </script>
+
+    <style>
+
+        #image {
+
+        }
+
+    </style>
+
 </head>
 
 <body>

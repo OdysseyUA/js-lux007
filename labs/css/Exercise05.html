@@ -1,13 +1,48 @@
 <html>
 <head>
 
+    <script>
+        function showMenu(id) {
+            document.getElementById(id).style.visibility = 'visible';
+        }
+
+        function hideMenu(id) {
+            document.getElementById(id).style.visibility = 'hidden';
+        }
+
+    </script>
+
+    <style>
+        table.menu {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        td.menu {
+            background: lightblue;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font: bold;
+        }
+
+        a:hover {
+            color: #606060;
+        }
+
+
+    </style>
+
+
 </head>
 
 <body>
 <h3>Drop down menu</h3>
 <table width="100%">
     <tr bgcolor="#FF8080">
-        <td onmouseover="showmenu('tutorials')" onmouseout="hidemenu('tutorials')">
+        <td onmouseover="showMenu('tutorials')" onmouseout="hideMenu('tutorials')">
             <a href="/default.asp">Tutorials</a><br/>
             <table class="menu" id="tutorials" width="120">
                 <tr>
@@ -27,7 +62,7 @@
                 </tr>
             </table>
         </td>
-        <td onmouseover="showmenu('scripting')" onmouseout="hidemenu('scripting')">
+        <td onmouseover="showMenu('scripting')" onmouseout="hideMenu('scripting')">
             <a href="/default.asp">Scripting</a><br/>
             <table class="menu" id="scripting" width="120">
                 <tr>
