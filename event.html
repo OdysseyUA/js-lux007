@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        document.getElementsByTagName('a').onclick = cancelHandler;
+
+        function cancelHandler(event) {
+            console.log('cancel event done');
+            return false;
+        }
+    </script>
+
+</head>
+<body>
+
+<a href="http://google.com" id="link">Do not go to Google</a>
+<a href="http://ya.ru" id="linkY">Go to Ya</a>
+
+
+<script>
+    document.addEventListener('randomEvent', function (e) {
+        console.log(e.detail);
+    });
+
+    var event = new CustomEvent('randomEvent', {'detail': '--> override detail property here'});
+
+    document.dispatchEvent(event);
+
+
+    //    document.getElementsByTagName('a').onclick = cancelHandler;
+    //
+    //    function cancelHandler(event){
+    //    console.log('cancel event done');
+    //        return false;
+    //    }
+</script>
+
+</body>
+</html>
